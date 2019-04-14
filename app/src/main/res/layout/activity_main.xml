@@ -5,29 +5,54 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
         tools:context=".MainActivity">
 
-    <EditText
-            android:id="@+id/edit_text_1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="column"
-            android:inputType="number"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
-
-    <EditText
-            android:id="@+id/edit_text_2"
-            app:layout_constraintTop_toBottomOf="@id/edit_text_1"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+    <LinearLayout
+            android:id="@+id/input_view"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:hint="row"
-            android:inputType="number"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content"/>
+            android:padding="10dp"
+            android:layout_height="match_parent">
+        <EditText
+                android:id="@+id/edit_text_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="column"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        <EditText
+                android:id="@+id/edit_text_2"
+                app:layout_constraintTop_toBottomOf="@id/edit_text_1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:hint="row"
+                android:inputType="number"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"/>
+
+        <Button
+                android:id="@+id/button_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_2"
+                android:layout_marginTop="10dp"
+                android:text="@android:string/ok"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/result_view"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
