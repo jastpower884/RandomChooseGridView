@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
             text.toInt()
         } catch (exception: NumberFormatException) {
             1
+
         }
         return if (textNumber > 0) {
             textNumber
