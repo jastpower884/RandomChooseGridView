@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         val colors = arrayListOf(
             Color.parseColor("#F5E3E3"),
             Color.parseColor("#E1F3E0"),
-            Color.parseColor("#F9E9F8")
+            Color.parseColor("#F9E9F8"),
         )
 
         for (l in 0 until column) {
